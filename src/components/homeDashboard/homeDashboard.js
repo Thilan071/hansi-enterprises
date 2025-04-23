@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import './homeDashboard.css';
 import Navigation from '../navigation/navigation';
 
 const HomeDashboard = () => {
+  const [timeFilter, setTimeFilter] = useState('Daily');
+
+  const dailyData = [
+    { name: 'Mon', amount: 3200 },
+    { name: 'Tue', amount: 2400 },
+    { name: 'Wed', amount: 1600 },
+    { name: 'Thu', amount: 2200 },
+    { name: 'Fri', amount: 1400 },
+    { name: 'Sat', amount: 1800 },
+    { name: 'Sun', amount: 3000 },
+  ];
+
   return (
     <div className="dashboard-container">
       <Navigation />
@@ -63,52 +76,52 @@ const HomeDashboard = () => {
             <div className="overview-header">
               <h3>Sales Overview</h3>
               <div className="time-filters">
-                <button className="time-filter active">Daily</button>
-                <button className="time-filter">Weekly</button>
-                <button className="time-filter">Monthly</button>
+                <button 
+                  className={`time-filter ${timeFilter === 'Daily' ? 'active' : ''}`}
+                  onClick={() => setTimeFilter('Daily')}
+                >
+                  Daily
+                </button>
+                <button 
+                  className={`time-filter ${timeFilter === 'Weekly' ? 'active' : ''}`}
+                  onClick={() => setTimeFilter('Weekly')}
+                >
+                  Weekly
+                </button>
+                <button 
+                  className={`time-filter ${timeFilter === 'Monthly' ? 'active' : ''}`}
+                  onClick={() => setTimeFilter('Monthly')}
+                >
+                  Monthly
+                </button>
               </div>
             </div>
             
             <div className="chart-container">
-              <div className="chart">
-                <div className="chart-labels">
-                  <div className="chart-label">$4k</div>
-                  <div className="chart-label">$3k</div>
-                  <div className="chart-label">$2k</div>
-                  <div className="chart-label">$1k</div>
-                  <div className="chart-label">$0k</div>
-                </div>
-                <div className="chart-bars">
-                  <div className="chart-bar">
-                    <div className="bar-column" style={{height: '80%'}}></div>
-                    <div className="bar-label">Mon</div>
-                  </div>
-                  <div className="chart-bar">
-                    <div className="bar-column" style={{height: '60%'}}></div>
-                    <div className="bar-label">Tue</div>
-                  </div>
-                  <div className="chart-bar">
-                    <div className="bar-column" style={{height: '40%'}}></div>
-                    <div className="bar-label">Wed</div>
-                  </div>
-                  <div className="chart-bar">
-                    <div className="bar-column" style={{height: '55%'}}></div>
-                    <div className="bar-label">Thu</div>
-                  </div>
-                  <div className="chart-bar">
-                    <div className="bar-column" style={{height: '35%'}}></div>
-                    <div className="bar-label">Fri</div>
-                  </div>
-                  <div className="chart-bar">
-                    <div className="bar-column" style={{height: '45%'}}></div>
-                    <div className="bar-label">Sat</div>
-                  </div>
-                  <div className="chart-bar">
-                    <div className="bar-column" style={{height: '75%'}}></div>
-                    <div className="bar-label">Sun</div>
-                  </div>
-                </div>
-              </div>
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart data={dailyData}>
+                  <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                  <XAxis 
+                    dataKey="name" 
+                    axisLine={false}
+                    tickLine={false}
+                  />
+                  <YAxis 
+                    axisLine={false}
+                    tickLine={false}
+                    tickFormatter={(value) => `$${value/1000}k`}
+                  />
+                  <Tooltip 
+                    formatter={(value) => [`$${value}`, 'Sales']}
+                    cursor={{ fill: 'transparent' }}
+                  />
+                  <Bar 
+                    dataKey="amount" 
+                    fill="#4318FF"
+                    radius={[10, 10, 0, 0]}
+                  />
+                </BarChart>
+              </ResponsiveContainer>
             </div>
           </div>
           

@@ -244,7 +244,32 @@
   /* Chart */
   .chart-container {
     height: 260px;
-  }
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .time-filter {
+    padding: 8px 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    }
+    
+    .time-filter.active {
+    background: #4318FF;
+    color: white;
+    }
+    
+    .time-filter:hover:not(.active) {
+    background: rgba(67, 24, 255, 0.1);
+    }
   
   .chart {
     display: flex;
