@@ -31,20 +31,24 @@
 }
 
 .menu-item {
+  text-decoration: none;
+  color: inherit;
   display: flex;
   align-items: center;
-  padding: 12px;
+  padding: 12px 24px;
+  margin: 4px 0;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .menu-item:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(67, 24, 255, 0.1);
 }
 
 .menu-item.active {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #4318FF;
+  color: white;
 }
 
 .nav-icon {

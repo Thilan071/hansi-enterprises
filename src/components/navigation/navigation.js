@@ -1,22 +1,25 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './navigation.css';
 import { MdDashboard, MdInventory, MdReceipt, MdPayments, 
          MdNotifications, MdPointOfSale, MdAssessment, 
          MdPeople, MdSettings } from 'react-icons/md';
 
 const Navigation = () => {
+  const location = useLocation();
+
   return (
     <div className="sidebar">
       <div className="sidebar-header">Business OS</div>
       <div className="sidebar-menu">
-        <div className="menu-item active">
+        <Link to="/" className={`menu-item ${location.pathname === '/' ? 'active' : ''}`}>
           <MdDashboard className="icon" />
           <span>Dashboard</span>
-        </div>
-        <div className="menu-item">
+        </Link>
+        <Link to="/stock" className={`menu-item ${location.pathname === '/stock' ? 'active' : ''}`}>
           <MdInventory className="icon" />
           <span>Stock Management</span>
-        </div>
+        </Link>
         <div className="menu-item">
           <MdReceipt className="icon" />
           <span>Customer Billing</span>
