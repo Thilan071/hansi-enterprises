@@ -11,9 +11,8 @@ const StockManagement = () => {
         <div className="stock-header">
           <h1>Stock</h1>
           <div className="search-notification">
-            <div className="search-bar">
-              <MdSearch className="search-icon" />
-              <input type="text" placeholder="Search..." />
+            <div className="search-container">
+              <input type="text" placeholder="Search..." className="search-input" />
             </div>
             <div className="notification">
               <MdNotifications className="notification-icon" />
