@@ -20,10 +20,10 @@ const Navigation = () => {
           <MdInventory className="icon" />
           <span>Stock Management</span>
         </Link>
-        <div className="menu-item">
+        <Link to="/billing" className={`menu-item ${location.pathname === '/billing' ? 'active' : ''}`}>
           <MdReceipt className="icon" />
           <span>Customer Billing</span>
-        </div>
+        </Link>
         <div className="menu-item">
           <MdPayments className="icon" />
           <span>Installments</span>

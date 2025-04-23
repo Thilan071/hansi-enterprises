@@ -1,0 +1,211 @@
+/* CustomerBilling.css */
+.billing-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .header-row h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 8px 12px;
+    flex: 1;
+    max-width: 300px;
+    border: 1px solid #e0e0e0;
+    margin: 0 20px;
+  }
+  
+  .search-input {
+    border: none;
+    margin-left: 8px;
+    outline: none;
+    width: 100%;
+  }
+  
+  .notification-icon {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .notification-dot {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 8px;
+    height: 8px;
+    background-color: #ff4d4f;
+    border-radius: 50%;
+  }
+  
+  .customer-billing-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .customer-billing-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .invoice-management-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .invoice-management-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .invoice-management-header h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    margin-left: 10px;
+  }
+  
+  .icon-document {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'%3E%3C/path%3E%3Cpolyline points='14 2 14 8 20 8'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center;
+    background-size: contain;
+  }
+  
+  .create-invoice-btn {
+    display: flex;
+    align-items: center;
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .create-invoice-btn .icon-document {
+    margin-right: 8px;
+    filter: brightness(0) invert(1);
+  }
+  
+  .invoice-table-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .search-invoice-input {
+    border: none;
+    margin-left: 8px;
+    outline: none;
+    width: 100%;
+  }
+  
+  .table-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .status-dropdown {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .dropdown-arrow {
+    margin-left: 8px;
+    font-size: 10px;
+  }
+  
+  .export-btn {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .invoice-table th, .invoice-table td {
+    text-align: left;
+    padding: 12px 8px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .invoice-table th {
+    color: #666;
+    font-weight: normal;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .status-badge.pending {
+    background-color: #f8f4ff;
+    color: #6200ea;
+  }
+  
+  .status-badge.overdue {
+    background-color: #ffebee;
+    color: #d50000;
+  }
+  
+  .status-badge.paid {
+    background-color: #e8f5e9;
+    color: #00c853;
+  }
+  
+  .action-icons {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .action-icons svg {
+    cursor: pointer;
+    color: #666;
+  }
