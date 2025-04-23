@@ -1,0 +1,91 @@
+.sidebar {
+    width: 250px;
+    background-color: #1a1f2c;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .sidebar-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding: 10px;
+  }
+  
+  .sidebar-menu {
+    flex: 1;
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin: 4px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .menu-item.active {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    color: #ffffff;
+  }
+  
+  /* .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  } */
+  
+  .menu-item span {
+    font-size: 14px;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #4a90e2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    font-weight: bold;
+  }
+  
+  .user-details {
+    flex: 1;
+  }
+  
+  .user-name {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .user-email {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+  }

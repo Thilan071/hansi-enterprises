@@ -1,59 +1,14 @@
 import React from 'react';
 import './homeDashboard.css';
+import Navigation from '../navigation/navigation';
 
 const HomeDashboard = () => {
   return (
     <div className="dashboard-container">
-      <div className="sidebar">
-        <div className="sidebar-header">Business OS</div>
-        <div className="sidebar-menu">
-          <div className="menu-item active">
-            <i className="icon dashboard-icon"></i>
-            <span>Dashboard</span>
-          </div>
-          <div className="menu-item">
-            <i className="icon stock-icon"></i>
-            <span>Stock Management</span>
-          </div>
-          <div className="menu-item">
-            <i className="icon billing-icon"></i>
-            <span>Customer Billing</span>
-          </div>
-          <div className="menu-item">
-            <i className="icon installments-icon"></i>
-            <span>Installments</span>
-          </div>
-          <div className="menu-item">
-            <i className="icon reminders-icon"></i>
-            <span>Reminders</span>
-          </div>
-          <div className="menu-item">
-            <i className="icon sales-icon"></i>
-            <span>Sales</span>
-          </div>
-          <div className="menu-item">
-            <i className="icon reports-icon"></i>
-            <span>Reports</span>
-          </div>
-          <div className="menu-item">
-            <i className="icon customers-icon"></i>
-            <span>Customers</span>
-          </div>
-          <div className="menu-item">
-            <i className="icon settings-icon"></i>
-            <span>Settings</span>
-          </div>
-        </div>
-        <div className="user-info">
-          <div className="user-avatar">A</div>
-          <div className="user-details">
-            <div className="user-name">Admin User</div>
-            <div className="user-email">admin@example.com</div>
-          </div>
-        </div>
-      </div>
+      <Navigation />
       
-      <div className="main-content">
+      <div className="main-content">Dashboard
+
         <div className="top-bar">
           <div className="page-title">Dashboard</div>
           <div className="search-container">
