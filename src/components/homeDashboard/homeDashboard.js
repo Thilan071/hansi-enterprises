@@ -7,8 +7,7 @@ const HomeDashboard = () => {
     <div className="dashboard-container">
       <Navigation />
       
-      <div className="main-content">Dashboard
-
+      <div className="main-content">
         <div className="top-bar">
           <div className="page-title">Dashboard</div>
           <div className="search-container">

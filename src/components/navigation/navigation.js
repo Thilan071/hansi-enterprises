@@ -1,8 +1,8 @@
 import React from 'react';
 import './navigation.css';
-import { MdDashboard, MdInventory, MdReceipt, MdPayments } from 'react-icons/md';
-import { BiBell } from 'react-icons/bi';
-import { FaChartBar, FaFileAlt, FaUsers, FaCog } from 'react-icons/fa';
+import { MdDashboard, MdInventory, MdReceipt, MdPayments, 
+         MdNotifications, MdPointOfSale, MdAssessment, 
+         MdPeople, MdSettings } from 'react-icons/md';
 
 const Navigation = () => {
   return (
@@ -10,39 +10,39 @@ const Navigation = () => {
       <div className="sidebar-header">Business OS</div>
       <div className="sidebar-menu">
         <div className="menu-item active">
-          <MdDashboard className="nav-icon" />
+          <MdDashboard className="icon" />
           <span>Dashboard</span>
         </div>
         <div className="menu-item">
-          <MdInventory className="nav-icon" />
+          <MdInventory className="icon" />
           <span>Stock Management</span>
         </div>
         <div className="menu-item">
-          <MdReceipt className="nav-icon" />
+          <MdReceipt className="icon" />
           <span>Customer Billing</span>
         </div>
         <div className="menu-item">
-          <MdPayments className="nav-icon" />
+          <MdPayments className="icon" />
           <span>Installments</span>
         </div>
         <div className="menu-item">
-          <BiBell className="nav-icon" />
+          <MdNotifications className="icon" />
           <span>Reminders</span>
         </div>
         <div className="menu-item">
-          <FaChartBar className="nav-icon" />
+          <MdPointOfSale className="icon" />
           <span>Sales</span>
         </div>
         <div className="menu-item">
-          <FaFileAlt className="nav-icon" />
+          <MdAssessment className="icon" />
           <span>Reports</span>
         </div>
         <div className="menu-item">
-          <FaUsers className="nav-icon" />
+          <MdPeople className="icon" />
           <span>Customers</span>
         </div>
         <div className="menu-item">
-          <FaCog className="nav-icon" />
+          <MdSettings className="icon" />
           <span>Settings</span>
         </div>
       </div>

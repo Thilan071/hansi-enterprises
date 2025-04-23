@@ -531,3 +531,16 @@
     color: #ef4444;
     font-weight: 500;
   }
+  
+  .main-content {
+    padding-left: 250px; /* Adjust this value based on your navigation width */
+    padding-top: 20px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f5f6fa;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    min-height: 100vh;
+  }
