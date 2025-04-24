@@ -1,9 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './stockManagement.css';
 import Navigation from '../navigation/navigation';
 import { MdSearch, MdAdd, MdNotifications, MdInventory } from 'react-icons/md';
 
 const StockManagement = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [products, setProducts] = useState([
+    {
+      name: 'Smartphone X',
+      sku: 'SM-X100',
+      category: 'Electronics',
+      supplier: 'TechSuppliers Inc.',
+      price: '$699.99',
+      stock: 24,
+      lastUpdated: '4/15/2025'
+    },
+    {
+      name: 'Desk Lamp',
+      sku: 'DL-220',
+      category: 'Home',
+      supplier: 'HomeDeco Ltd.',
+      price: '$45.50',
+      stock: 3,
+      lastUpdated: '4/17/2025'
+    },
+    {
+      name: 'USB Cable Type-C',
+      sku: 'USB-TC',
+      category: 'Accessories',
+      supplier: 'ElectroComp',
+      price: '$12.99',
+      stock: 7,
+      lastUpdated: '4/18/2025'
+    },
+    {
+      name: 'Wireless Mouse',
+      sku: 'WM-440',
+      category: 'Electronics',
+      supplier: 'TechSuppliers Inc.',
+      price: '$29.99',
+      stock: 42,
+      lastUpdated: '4/14/2025'
+    },
+    {
+      name: 'Office Chair',
+      sku: 'OC-500',
+      category: 'Furniture',
+      supplier: 'FurniWorld',
+      price: '$179.99',
+      stock: 12,
+      lastUpdated: '4/10/2025'
+    }
+  ]);
+
+  const handleSearch = (e) => {
+    setSearchQuery(e.target.value.toLowerCase());
+  };
+
+  const filteredProducts = products.filter(product => 
+    product.name.toLowerCase().includes(searchQuery) ||
+    product.sku.toLowerCase().includes(searchQuery)
+  );
+
   return (
     <div className="dashboard-layout">
       <Navigation />
@@ -12,7 +70,14 @@ const StockManagement = () => {
           <h1>Stock</h1>
           <div className="search-notification">
             <div className="search-container">
-              <input type="text" placeholder="Search..." className="search-input" />
+              <MdSearch className="search-icon" />
+              <input 
+                type="text" 
+                placeholder="Search..." 
+                className="search-input"
+                onChange={handleSearch}
+                value={searchQuery}
+              />
             </div>
             <div className="notification">
               <MdNotifications className="notification-icon" />
@@ -41,7 +106,12 @@ const StockManagement = () => {
             <div className="table-controls">
               <div className="search-products">
                 <MdSearch className="search-icon" />
-                <input type="text" placeholder="Search products by name or SKU..." />
+                <input 
+                  type="text" 
+                  placeholder="Search products by name or SKU..." 
+                  onChange={handleSearch}
+                  value={searchQuery}
+                />
               </div>
               <div className="filters">
                 <div className="category-filter">
@@ -67,71 +137,25 @@ const StockManagement = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Smartphone X</td>
-                  <td>SM-X100</td>
-                  <td>Electronics</td>
-                  <td>TechSuppliers Inc.</td>
-                  <td>$699.99</td>
-                  <td><span className="stock-normal">24 units</span></td>
-                  <td>4/15/2025</td>
-                  <td className="actions">
-                    <button className="edit-btn"></button>
-                    <button className="delete-btn"></button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Desk Lamp</td>
-                  <td>DL-220</td>
-                  <td>Home</td>
-                  <td>HomeDeco Ltd.</td>
-                  <td>$45.50</td>
-                  <td><span className="stock-low">3 units</span></td>
-                  <td>4/17/2025</td>
-                  <td className="actions">
-                    <button className="edit-btn"></button>
-                    <button className="delete-btn"></button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>USB Cable Type-C</td>
-                  <td>USB-TC</td>
-                  <td>Accessories</td>
-                  <td>ElectroComp</td>
-                  <td>$12.99</td>
-                  <td><span className="stock-low">7 units</span></td>
-                  <td>4/18/2025</td>
-                  <td className="actions">
-                    <button className="edit-btn"></button>
-                    <button className="delete-btn"></button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Wireless Mouse</td>
-                  <td>WM-440</td>
-                  <td>Electronics</td>
-                  <td>TechSuppliers Inc.</td>
-                  <td>$29.99</td>
-                  <td><span className="stock-normal">42 units</span></td>
-                  <td>4/14/2025</td>
-                  <td className="actions">
-                    <button className="edit-btn"></button>
-                    <button className="delete-btn"></button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Office Chair</td>
-                  <td>OC-500</td>
-                  <td>Furniture</td>
-                  <td>FurniWorld</td>
-                  <td>$179.99</td>
-                  <td><span className="stock-normal">12 units</span></td>
-                  <td>4/10/2025</td>
-                  <td className="actions">
-                    <button className="edit-btn"></button>
-                    <button className="delete-btn"></button>
-                  </td>
-                </tr>
+                {filteredProducts.map((product) => (
+                  <tr key={product.sku}>
+                    <td>{product.name}</td>
+                    <td>{product.sku}</td>
+                    <td>{product.category}</td>
+                    <td>{product.supplier}</td>
+                    <td>{product.price}</td>
+                    <td>
+                      <span className={`stock-${product.stock < 10 ? 'low' : 'normal'}`}>
+                        {product.stock} units
+                      </span>
+                    </td>
+                    <td>{product.lastUpdated}</td>
+                    <td className="actions">
+                      <button className="edit-btn"></button>
+                      <button className="delete-btn"></button>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

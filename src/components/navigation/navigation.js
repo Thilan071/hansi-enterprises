@@ -28,10 +28,10 @@ const Navigation = () => {
           <MdPayments className="icon" />
           <span>Installments</span>
         </Link>
-        <div className="menu-item">
+        <Link to="/reminders" className={`menu-item ${location.pathname === '/reminders' ? 'active' : ''}`}>
           <MdNotifications className="icon" />
           <span>Reminders</span>
-        </div>
+        </Link>
         <div className="menu-item">
           <MdPointOfSale className="icon" />
           <span>Sales</span>
