@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomeDashboard from './components/homeDashboard/homeDashboard';
 import StockManagement from './components/stockManagement/stockManagement';
 import CustomerBilling from './components/customerBilling/customerBilling';
+import Installments from './components/Installments/Installments';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<HomeDashboard />} />
         <Route path="/stock" element={<StockManagement />} />
         <Route path="/billing" element={<CustomerBilling />} />
+        <Route path="/installments" element={<Installments />} />
       </Routes>
     </Router>
   );

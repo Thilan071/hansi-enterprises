@@ -24,10 +24,10 @@ const Navigation = () => {
           <MdReceipt className="icon" />
           <span>Customer Billing</span>
         </Link>
-        <div className="menu-item">
+        <Link to="/installments" className={`menu-item ${location.pathname === '/installments' ? 'active' : ''}`}>
           <MdPayments className="icon" />
           <span>Installments</span>
-        </div>
+        </Link>
         <div className="menu-item">
           <MdNotifications className="icon" />
           <span>Reminders</span>
