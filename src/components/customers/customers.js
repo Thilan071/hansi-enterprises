@@ -1,7 +1,8 @@
 // customers.js
 import React, { useState } from 'react';
 import './customers.css';
-import Navigation from '../navigation/navigation';  // Add this import
+import Navigation from '../navigation/navigation';
+import { MdSearch, MdNotifications, MdPeople, MdAdd } from 'react-icons/md';  // Add this import
 
 const Customers = () => {
   // Initial customer data
@@ -83,30 +84,32 @@ const Customers = () => {
         <div className="customers-container">
           <div className="header">
             <h1>Customers</h1>
-            <div className="search-notifications">
+            <div className="search-notification">
               <div className="search-container">
+                <MdSearch className="search-icon" />
                 <input 
                   type="text" 
                   placeholder="Search..." 
-                  className="main-search-input" 
+                  className="search-input"
+                  onChange={handleSearch}
+                  value={searchTerm}
                 />
-                <i className="search-icon">🔍</i>
               </div>
-              <div className="notification-icon">
+              <div className="notification">
+                <MdNotifications className="notification-icon" />
                 <span className="notification-badge">1</span>
-                <i>🔔</i>
               </div>
             </div>
           </div>
   
           <div className="customer-management">
             <div className="management-header">
-              <div className="title">
-                <i className="user-icon">👤</i>
+              <div className="section-title">
+                <MdPeople className="customer-icon" />
                 <h2>Customer Management</h2>
               </div>
               <button className="add-customer-btn">
-                <i className="add-icon">+</i>
+                <MdAdd className="btn-icon" />
                 Add New Customer
               </button>
             </div>
