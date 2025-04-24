@@ -1,0 +1,159 @@
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 24px;
+  background-color: #f8fafc;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  color: #64748b;
+}
+
+.search-input, .search-sale-input {
+  padding: 8px 8px 8px 40px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  width: 250px;
+}
+
+.sales-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 16px;
+}
+
+.sales-table th,
+.sales-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.sales-table th {
+  background-color: #f8fafc;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  font-size: 14px;
+}
+
+.status-badge.completed {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.status-badge.pending {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.action-icons {
+  display: flex;
+  gap: 12px;
+  color: #64748b;
+}
+
+.action-icons svg {
+  cursor: pointer;
+}
+
+.action-icons svg:hover {
+  color: #0ea5e9;
+}
+
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+}
+
+.export-btn {
+  padding: 8px 16px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.export-btn:hover {
+  background-color: #f1f5f9;
+}
+
+.create-sale-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.create-sale-btn:hover {
+  background-color: #0284c7;
+}
+
+.button-icon {
+  color: white;
+}
+
+.sales-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.sales-section h2 {
+  font-size: 20px;
+  color: #1f2937;
+}
+
+.sales-management-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.sales-management-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #1f2937;
+}
+
+.sales-table-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+}

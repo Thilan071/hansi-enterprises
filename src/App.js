@@ -5,6 +5,7 @@ import StockManagement from './components/stockManagement/stockManagement';
 import CustomerBilling from './components/customerBilling/customerBilling';
 import Installments from './components/Installments/Installments';
 import Reminders from './components/reminders/reminders';
+import Sales from './components/sales/sales';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/billing" element={<CustomerBilling />} />
         <Route path="/installments" element={<Installments />} />
         <Route path="/reminders" element={<Reminders />} />
+        <Route path="/sales" element={<Sales />} />
       </Routes>
     </Router>
   );

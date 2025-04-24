@@ -32,10 +32,10 @@ const Navigation = () => {
           <MdNotifications className="icon" />
           <span>Reminders</span>
         </Link>
-        <div className="menu-item">
+        <Link to="/sales" className={`menu-item ${location.pathname === '/sales' ? 'active' : ''}`}>
           <MdPointOfSale className="icon" />
           <span>Sales</span>
-        </div>
+        </Link>
         <div className="menu-item">
           <MdAssessment className="icon" />
           <span>Reports</span>
