@@ -13,10 +13,13 @@ const Company = () => {
   };
 
   const isTabActive = (path) => {
-    if (path === '/settings' && location.pathname === '/settings') {
-      return true;
+    // For the root settings path, only return true if we're exactly on /settings
+    if (path === '/settings') {
+      return location.pathname === '/settings';
     }
-    return location.pathname === path;
+    
+    // For other tabs, check if the current location starts with that path
+    return location.pathname.startsWith(path);
   };
 
   return (
