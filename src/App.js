@@ -7,6 +7,7 @@ import Installments from './components/Installments/Installments';
 import Reminders from './components/reminders/reminders';
 import Sales from './components/sales/sales';
 import Reports from './components/reports/reports';
+import Customers from './components/customers/customers';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/reminders" element={<Reminders />} />
         <Route path="/sales" element={<Sales />} />
         <Route path="/reports" element={<Reports />} />
+        <Route path="/customers" element={<Customers />} />
       </Routes>
     </Router>
   );

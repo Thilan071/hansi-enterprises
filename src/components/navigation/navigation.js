@@ -40,10 +40,10 @@ const Navigation = () => {
           <MdAssessment className="icon" />
           <span>Reports</span>
         </Link>
-        <div className="menu-item">
+        <Link to="/customers" className={`menu-item ${location.pathname === '/customers' ? 'active' : ''}`}>
           <MdPeople className="icon" />
           <span>Customers</span>
-        </div>
+        </Link>
         <div className="menu-item">
           <MdSettings className="icon" />
           <span>Settings</span>
