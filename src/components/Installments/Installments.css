@@ -275,3 +275,48 @@
     cursor: pointer;
     color: #666;
   }
+  
+  .create-plan-btn {
+    background-color: #0ea5e9;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .create-plan-btn:hover {
+    background-color: #0284c7;
+  }
+  
+  .installment-plans-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .header-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .header-with-icon svg {
+    color: #64748b;
+  }
+  
+  .header-with-icon h2 {
+    font-size: 18px;
+    color: #1f2937;
+    margin: 0;
+  }
+  
+  .installment-plans-section-secondary {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }

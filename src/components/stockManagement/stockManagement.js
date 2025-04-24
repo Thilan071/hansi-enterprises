@@ -1,7 +1,7 @@
 import React from 'react';
 import './stockManagement.css';
 import Navigation from '../navigation/navigation';
-import { MdSearch, MdAdd, MdNotifications } from 'react-icons/md';
+import { MdSearch, MdAdd, MdNotifications, MdInventory } from 'react-icons/md';
 
 const StockManagement = () => {
   return (
@@ -26,7 +26,7 @@ const StockManagement = () => {
           
           <div className="section-header">
             <div className="section-title">
-              <MdAdd className="inventory-icon" />
+              <MdInventory className="inventory-icon" />
               <h3>Inventory Management</h3>
             </div>
             <div className="action-buttons">

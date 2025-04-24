@@ -174,3 +174,16 @@
   .create-invoice-btn:hover {
     background-color: #0284c7;
   }
+  
+  .invoice-management-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  
+  .invoice-icon {
+    color: #64748b;
+    width: 24px;
+    height: 24px;
+  }

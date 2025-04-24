@@ -1,7 +1,7 @@
 // CustomerBilling.js
 import React, { useState } from 'react';
 import '../customerBilling/customerBilling.css';
-import { Search, Eye, Download, Mail } from 'lucide-react';
+import { Search, Eye, Download, Mail, Receipt } from 'lucide-react';  // Add Receipt to imports
 import Navigation from '../navigation/navigation';  // Add this import
 
 const CustomerBilling = () => {
@@ -75,7 +75,7 @@ const CustomerBilling = () => {
   
           <div className="invoice-management-section">
             <div className="invoice-management-header">
-              <span className="icon-document"></span>
+              <Receipt className="invoice-icon" />
               <h2>Invoice Management</h2>
             </div>
           </div>
