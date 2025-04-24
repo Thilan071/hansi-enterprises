@@ -2,7 +2,8 @@
 import React from 'react';
 import { BarChart, Bar, PieChart, Pie, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Cell, ResponsiveContainer } from 'recharts';
 import './reports.css';
-import Navigation from '../navigation/navigation';  // Add this import
+import Navigation from '../navigation/navigation';
+import { MdSearch, MdNotifications } from 'react-icons/md';  // Add this import
 
 const Reports = () => {
   // Data for Monthly Sales Trend
@@ -54,9 +55,21 @@ const Reports = () => {
       <div className="main-content">
         <div className="reports-container">
           <div className="header">
+
             <h1>Reports</h1>
-            <div className="search-container">
-              <input type="text" placeholder="Search..." className="search-input" />
+            <div className="search-notification">
+              <div className="search-container">
+                <MdSearch className="search-icon" />
+                <input 
+                  type="text" 
+                  placeholder="Search..." 
+                  className="search-input"
+                />
+              </div>
+              <div className="notification">
+                <MdNotifications className="notification-icon" />
+                <span className="notification-badge">1</span>
+              </div>
             </div>
           </div>
 
