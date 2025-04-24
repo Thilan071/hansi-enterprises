@@ -55,13 +55,14 @@ const CustomerBilling = () => {
         <div className="billing-container">
           <div className="header-row">
             <h1>Billing</h1>
-            <div className="search-container">
-              <Search size={20} />
-              <input type="text" placeholder="Search..." className="search-input" />
-            </div>
-            <div className="notification-icon">
-              <div className="notification-dot"></div>
-              <Mail size={20} />
+            <div className="search-notification">
+              <div className="search-container">
+                <input type="text" placeholder="Search..." className="search-input" />
+              </div>
+              <div className="notification">
+                <Mail className="notification-icon" />
+                <span className="notification-badge">1</span>
+              </div>
             </div>
           </div>
   
@@ -82,18 +83,18 @@ const CustomerBilling = () => {
           
           <div className="invoice-table-container">
             <div className="table-controls">
-              <div className="search-container">
-                <Search size={20} />
+              <div className="search-products">
+                <Search className="search-icon" />
                 <input 
                   type="text" 
                   placeholder="Search by invoice number or customer..." 
-                  className="search-invoice-input" 
                 />
               </div>
-              <div className="table-actions">
-                <div className="status-dropdown">
-                  <span>All Status</span>
-                  <span className="dropdown-arrow">▼</span>
+              <div className="filters">
+                <div className="category-filter">
+                  <select>
+                    <option>All Status</option>
+                  </select>
                 </div>
                 <button className="export-btn">Export</button>
               </div>
