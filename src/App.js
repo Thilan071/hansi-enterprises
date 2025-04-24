@@ -8,6 +8,7 @@ import Reminders from './components/reminders/reminders';
 import Sales from './components/sales/sales';
 import Reports from './components/reports/reports';
 import Customers from './components/customers/customers';
+import Settings from './components/setting/setting.js';  // Update this line
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/sales" element={<Sales />} />
         <Route path="/reports" element={<Reports />} />
         <Route path="/customers" element={<Customers />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </Router>
   );
