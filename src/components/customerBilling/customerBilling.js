@@ -68,6 +68,9 @@ const CustomerBilling = () => {
   
           <div className="customer-billing-section">
             <h2>Customer Billing</h2>
+            <button className="create-invoice-btn">
+              Create New Invoice
+            </button>
           </div>
   
           <div className="invoice-management-section">
@@ -75,10 +78,6 @@ const CustomerBilling = () => {
               <span className="icon-document"></span>
               <h2>Invoice Management</h2>
             </div>
-            <button className="create-invoice-btn">
-              <span className="icon-document"></span>
-              Create New Invoice
-            </button>
           </div>
           
           <div className="invoice-table-container">
