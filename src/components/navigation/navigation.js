@@ -36,10 +36,10 @@ const Navigation = () => {
           <MdPointOfSale className="icon" />
           <span>Sales</span>
         </Link>
-        <div className="menu-item">
+        <Link to="/reports" className={`menu-item ${location.pathname === '/reports' ? 'active' : ''}`}>
           <MdAssessment className="icon" />
           <span>Reports</span>
-        </div>
+        </Link>
         <div className="menu-item">
           <MdPeople className="icon" />
           <span>Customers</span>
