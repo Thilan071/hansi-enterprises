@@ -108,10 +108,12 @@ const Customers = () => {
                 <MdPeople className="customer-icon" />
                 <h2>Customer Management</h2>
               </div>
-              <button className="add-customer-btn">
-                <MdAdd className="btn-icon" />
-                Add New Customer
-              </button>
+              <div className="action-buttons">
+                <button className="add-product-btn">
+                  <MdAdd className="btn-icon" />
+                  Add New Customer
+                </button>
+              </div>
             </div>
   
             <div className="table-container">
