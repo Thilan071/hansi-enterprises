@@ -4,7 +4,7 @@ import './customers.css';
 import Navigation from '../navigation/navigation';
 import { MdSearch, MdPeople, MdAdd } from 'react-icons/md';
 import bellIcon from '../assets/images/bell.png';
-import { Search } from 'lucide-react'; // Import the Search icon from Lucide React
+import { Search, Eye, Edit, Trash2 } from 'lucide-react'; // Import Lucide React icons
 
 const Customers = () => {
   // Initial customer data
@@ -179,16 +179,10 @@ const Customers = () => {
                       <td>{customer.orders}</td>
                       <td>{customer.lastPurchase}</td>
                       <td>
-                        <div className="action-buttons">
-                          <button className="action-btn view-btn">
-                            <i className="view-icon">👁️</i>
-                          </button>
-                          <button className="action-btn edit-btn">
-                            <i className="edit-icon">✏️</i>
-                          </button>
-                          <button className="action-btn delete-btn">
-                            <i className="delete-icon">🗑️</i>
-                          </button>
+                        <div className="action-icons">
+                          <Eye size={18} />
+                          <Edit size={18} />
+                          <Trash2 size={18} />
                         </div>
                       </td>
                     </tr>
