@@ -2,8 +2,9 @@
 import React, { useState } from 'react';
 import './customers.css';
 import Navigation from '../navigation/navigation';
-import { MdSearch, MdPeople, MdAdd } from 'react-icons/md';  // Removed MdNotifications
-import bellIcon from '../assets/images/bell.png'; // Import bell icon image
+import { MdSearch, MdPeople, MdAdd } from 'react-icons/md';
+import bellIcon from '../assets/images/bell.png';
+import { Search } from 'lucide-react'; // Import the Search icon from Lucide React
 
 const Customers = () => {
   // Initial customer data
@@ -108,7 +109,6 @@ const Customers = () => {
                     position: 'static'
                   }} 
                 />
-                {/* Notification badge removed */}
               </div>
             </div>
           </div>
@@ -128,13 +128,13 @@ const Customers = () => {
             </div>
   
             <div className="table-container">
-              <div className="table-actions">
+              <div className="table-controls">
                 <div className="search-container">
-                  <i className="search-icon">🔍</i>
+                  <Search className="search-icon" />
                   <input 
                     type="text" 
                     placeholder="Search by name, email or phone..." 
-                    className="table-search-input" 
+                    className="search-sale-input" 
                     value={searchTerm}
                     onChange={handleSearch}
                   />
