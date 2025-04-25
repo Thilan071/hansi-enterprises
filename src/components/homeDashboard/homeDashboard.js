@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import './homeDashboard.css';
 import Navigation from '../navigation/navigation';
+import bellIcon from '../assets/images/bell.png';
 
 const HomeDashboard = () => {
   const [timeFilter, setTimeFilter] = useState('Daily');
@@ -25,6 +26,10 @@ const HomeDashboard = () => {
           <div className="page-title">Dashboard</div>
           <div className="search-container">
             <input type="text" placeholder="Search..." className="search-input" />
+          </div>
+          <div className="notification-icon">
+            <img src={bellIcon} alt="Notifications" />
+            {/* Notification badge removed */}
           </div>
         </div>
         
