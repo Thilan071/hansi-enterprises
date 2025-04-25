@@ -95,6 +95,11 @@
     border-bottom: 1px solid #e2e8f0;
   }
   
+  .top-bar-right {
+    display: flex;
+    align-items: center;
+  }
+  
   .page-title {
     font-size: 18px;
     font-weight: 600;
@@ -118,6 +123,24 @@
     position: relative;
     width: 24px;
     height: 24px;
+    cursor: pointer;
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: normal;
+  }
+  
+  .notification-icon::before {
+    content: '\1F514'; /* Unicode for bell character */
+    font-size: 18px;
+    color: #64748b;
+    transition: color 0.2s;
+  }
+  
+  .notification-icon:hover::before {
+    color: #3b82f6;
   }
   
   .notification-badge {
@@ -133,6 +156,8 @@
     align-items: center;
     justify-content: center;
     font-size: 10px;
+    font-weight: bold;
+    border: 2px solid #fff;
   }
   
   /* Dashboard Content */
