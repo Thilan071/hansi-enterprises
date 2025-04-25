@@ -1,8 +1,9 @@
 // Reminders.js
 import React, { useState } from 'react';
 import './reminders.css';
-import { Search, Bell, Send, Edit, Trash, Mail, MessageSquare, BellRing } from 'lucide-react';
-import Navigation from '../navigation/navigation';  // Add this import
+import { Search, Send, Edit, Trash, Mail, MessageSquare, BellRing } from 'lucide-react';
+import Navigation from '../navigation/navigation';
+import bellIcon from '../assets/images/bell.png';  // Import the bell icon image
 
 const Reminders = () => {
   const [reminders, setReminders] = useState([
@@ -76,23 +77,41 @@ const Reminders = () => {
             <div className="search-container">
               <input type="text" placeholder="Search..." className="search-input" />
             </div>
-            <div className="notification-icon">
-              <div className="notification-dot"></div>
-              <Bell size={20} />
+            <div className="notification-icon" style={{ background: 'transparent' }}>
+              <img 
+                src={bellIcon} 
+                alt="Notifications" 
+                className="notification-img" 
+                style={{ 
+                  width: '24px', 
+                  height: '24px',
+                  display: 'block',
+                  position: 'static'
+                }} 
+              />
             </div>
           </div>
   
           <div className="reminders-section">
             <h2>Reminders</h2>
             <button className="create-reminder-btn">
-              <Bell size={16} className="button-icon" />
+              <img 
+                src={bellIcon} 
+                alt="Bell" 
+                style={{ width: '16px', height: '16px', marginRight: '8px' }} 
+                className="button-icon" 
+              />
               Create New Reminder
             </button>
           </div>
   
           <div className="reminder-system-section">
             <div className="reminder-system-header">
-              <Bell size={18} />
+              <img 
+                src={bellIcon} 
+                alt="Bell" 
+                style={{ width: '18px', height: '18px', marginRight: '8px' }} 
+              />
               <h2>Reminder System</h2>
             </div>
           </div>

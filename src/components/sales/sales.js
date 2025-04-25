@@ -1,8 +1,9 @@
 // Sales.js
 import React, { useState } from 'react';
 import './sales.css';
-import { Search, ShoppingCart, Eye, Download, Bell, Check, Clock } from 'lucide-react';
-import Navigation from '../navigation/navigation';  // Add this import
+import { Search, ShoppingCart, Eye, Download, Check, Clock } from 'lucide-react'; // Removed Bell
+import Navigation from '../navigation/navigation';
+import bellIcon from '../assets/images/bell.png'; // Added bell icon import
 
 const Sales = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -80,9 +81,18 @@ const Sales = () => {
                 value={searchQuery}
               />
             </div>
-            <div className="notification-icon">
-              <div className="notification-dot"></div>
-              <Bell size={20} />
+            <div className="notification-icon" style={{ background: 'transparent' }}>
+              <img 
+                src={bellIcon} 
+                alt="Notifications" 
+                className="notification-img" 
+                style={{ 
+                  width: '24px', 
+                  height: '24px',
+                  display: 'block',
+                  position: 'static'
+                }} 
+              />
             </div>
           </div>
   
