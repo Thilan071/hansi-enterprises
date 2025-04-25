@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import './customers.css';
 import Navigation from '../navigation/navigation';
-import { MdSearch, MdNotifications, MdPeople, MdAdd } from 'react-icons/md';  // Add this import
+import { MdSearch, MdPeople, MdAdd } from 'react-icons/md';  // Removed MdNotifications
+import bellIcon from '../assets/images/bell.png'; // Import bell icon image
 
 const Customers = () => {
   // Initial customer data
@@ -95,9 +96,19 @@ const Customers = () => {
                   value={searchTerm}
                 />
               </div>
-              <div className="notification">
-                <MdNotifications className="notification-icon" />
-                <span className="notification-badge">1</span>
+              <div className="notification" style={{ background: 'transparent' }}>
+                <img 
+                  src={bellIcon} 
+                  alt="Notifications" 
+                  className="notification-img" 
+                  style={{ 
+                    width: '24px', 
+                    height: '24px',
+                    display: 'block',
+                    position: 'static'
+                  }} 
+                />
+                {/* Notification badge removed */}
               </div>
             </div>
           </div>

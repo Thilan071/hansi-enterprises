@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './setting.css';
-import { Search, Bell, Save } from 'lucide-react';
+import { Search, Save } from 'lucide-react'; // Remove Bell from imports
 import Navigation from '../navigation/navigation';
 import { useNavigate, useLocation } from 'react-router-dom';
+import bellIcon from '../assets/images/bell.png'; // Import bell icon image
 
 const Settings = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -34,9 +35,18 @@ const Settings = () => {
             <div className="search-container">
               <Search size={18} className="search-icon" />
               <input type="text" placeholder="Search..." className="search-input" />
-              <div className="notification-icon">
-                <Bell size={20} />
-                <span className="notification-badge"></span>
+              <div className="notification-icon" style={{ background: 'transparent' }}>
+                <img 
+                  src={bellIcon} 
+                  alt="Notifications" 
+                  className="notification-img" 
+                  style={{ 
+                    width: '24px', 
+                    height: '24px',
+                    display: 'block',
+                    position: 'static'
+                  }} 
+                />
               </div>
             </div>
           </header>
@@ -70,7 +80,11 @@ const Settings = () => {
                   <span>Users</span>
                 </div>
                 <div className={`nav-tab ${isTabActive('/settings/notifications') ? 'active' : ''}`} onClick={() => handleTabClick('/settings/notifications')}>
-                  <Bell size={16} />
+                  <img 
+                    src={bellIcon} 
+                    alt="Notifications" 
+                    style={{ width: '16px', height: '16px' }} 
+                  />
                   <span>Notifications</span>
                 </div>
                 <div className={`nav-tab ${isTabActive('/settings/integrations') ? 'active' : ''}`} onClick={() => handleTabClick('/settings/integrations')}>
