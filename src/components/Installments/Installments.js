@@ -1,8 +1,9 @@
 // Installments.js
 import React, { useState } from 'react';
-import './Installments.css';
-import { Search, Eye, Bell, Check } from 'lucide-react';
-import Navigation from '../navigation/navigation';  // Add this import
+import './Installments.css';  // Fixed import case to match actual file name
+import { Search, Eye, Check } from 'lucide-react';
+import Navigation from '../navigation/navigation';
+import bellIcon from '../assets/images/bell.png';
 
 const Installments = () => {
   const [installmentPlans, setInstallmentPlans] = useState([
@@ -63,15 +64,25 @@ const Installments = () => {
       <Navigation />
       <div className="main-content">
         <div className="installments-container">
+          {/* Header with notification bell */}
           <div className="header-row">
             <h1>Installments</h1>
             <div className="search-notification">
               <div className="search-container">
                 <input type="text" placeholder="Search..." className="search-input" />
               </div>
-              <div className="notification">
-                <Bell className="notification-icon" />
-                <span className="notification-badge">1</span>
+              <div className="notification" style={{ background: 'transparent' }}>
+                <img 
+                  src={bellIcon} 
+                  alt="Notifications" 
+                  className="notification-img" 
+                  style={{ 
+                    width: '24px', 
+                    height: '24px',
+                    display: 'block',
+                    position: 'static'
+                  }} 
+                />
               </div>
             </div>
           </div>
@@ -166,7 +177,13 @@ const Installments = () => {
                     <td>
                       <div className="action-icons">
                         <Eye size={18} />
-                        {plan.status !== 'completed' && <Bell size={18} />}
+                        {plan.status !== 'completed' && (
+                          <img 
+                            src={bellIcon} 
+                            alt="Notification" 
+                            style={{ width: '18px', height: '18px' }}
+                          />
+                        )}
                       </div>
                     </td>
                   </tr>

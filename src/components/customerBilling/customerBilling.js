@@ -1,8 +1,9 @@
 // CustomerBilling.js
 import React, { useState } from 'react';
 import '../customerBilling/customerBilling.css';
-import { Search, Eye, Download, Mail, Receipt } from 'lucide-react';  // Add Receipt to imports
-import Navigation from '../navigation/navigation';  // Add this import
+import { Search, Eye, Download, Mail, Receipt } from 'lucide-react';
+import Navigation from '../navigation/navigation';
+import bellIcon from '../assets/images/bell.png';
 
 const CustomerBilling = () => {
   const [invoices, setInvoices] = useState([
@@ -59,9 +60,18 @@ const CustomerBilling = () => {
               <div className="search-container">
                 <input type="text" placeholder="Search..." className="search-input" />
               </div>
-              <div className="notification">
-                <Mail className="notification-icon" />
-                <span className="notification-badge">1</span>
+              <div className="notification" style={{ background: 'transparent' }}>
+                <img 
+                  src={bellIcon} 
+                  alt="Notifications" 
+                  className="notification-img" 
+                  style={{ 
+                    width: '24px', 
+                    height: '24px',
+                    display: 'block',
+                    position: 'static'
+                  }} 
+                />
               </div>
             </div>
           </div>
