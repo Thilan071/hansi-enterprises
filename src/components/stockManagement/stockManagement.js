@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './stockManagement.css';
 import Navigation from '../navigation/navigation';
-import { MdSearch, MdAdd, MdNotifications, MdInventory } from 'react-icons/md';
+import { MdSearch, MdAdd, MdInventory } from 'react-icons/md';
+import bellIcon from '../assets/images/bell.png';
 
 const StockManagement = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -79,9 +80,18 @@ const StockManagement = () => {
                 value={searchQuery}
               />
             </div>
-            <div className="notification">
-              <MdNotifications className="notification-icon" />
-              <span className="notification-badge">1</span>
+            <div className="notification" style={{ background: 'transparent' }}>
+              <img 
+                src={bellIcon} 
+                alt="Notifications" 
+                className="notification-img" 
+                style={{ 
+                  width: '24px', 
+                  height: '24px',
+                  display: 'block',
+                  position: 'static'
+                }} 
+              />
             </div>
           </div>
         </div>

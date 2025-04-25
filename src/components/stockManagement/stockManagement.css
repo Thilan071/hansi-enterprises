@@ -419,3 +419,9 @@
   border-color: #4318FF;
   box-shadow: 0 0 0 1px #4318FF;
 }
+
+.notification-img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
