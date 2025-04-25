@@ -4,7 +4,7 @@ import './customers.css';
 import Navigation from '../navigation/navigation';
 import { MdSearch, MdPeople, MdAdd } from 'react-icons/md';
 import bellIcon from '../assets/images/bell.png';
-import { Search, Eye, Edit, Trash2 } from 'lucide-react'; // Import Lucide React icons
+import { Search, Eye, Edit, Trash2, Mail, Phone } from 'lucide-react'; // Added Mail and Phone icons
 
 const Customers = () => {
   // Initial customer data
@@ -161,11 +161,11 @@ const Customers = () => {
                       <td>
                         <div className="contact-info">
                           <div className="email">
-                            <i className="email-icon">✉️</i>
+                            <Mail size={14} className="contact-icon" />
                             {customer.email}
                           </div>
                           <div className="phone">
-                            <i className="phone-icon">📞</i>
+                            <Phone size={14} className="contact-icon" />
                             {customer.phone}
                           </div>
                         </div>
